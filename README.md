@@ -47,7 +47,7 @@ Odwróćmy teraz sytuację z warsztatu "Gra w zgadywanie liczb": to użytkownik 
 
 Zadaniem gracza będzie udzielanie odpowiedzi "więcej", "mniej", "trafiłeś".
 
-Do tego warsztatu dołączony jest schemat blokowy algorytmu. Zaimplementuj go w Javie. flowchart
+
 Warsztat: Kostka do gry
 
 W grach planszowych i papierowych RPG używa się wielu rodzajów kostek do gry, nie tylko tych dobrze znanych, sześciennych. Jedną z popularniejszych kości jest np. kostka dziesięciościenna, a nawet stuścienna! Jako że w grach kośćmi rzuca się często, pisanie za każdym razem np. "rzuć dwiema kostkami dziesięciościennymi, a do wyniku dodaj 20" byłoby nudne, trudne i marnowałoby ogromne ilości papieru. W takich sytuacjach używa się kodu "rzuć 2D10+20".
