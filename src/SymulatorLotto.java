@@ -18,37 +18,32 @@ public class SymulatorLotto {
 		Scanner scan = new Scanner(System.in);
 
 		// wylosowanie liczb
-	
+
 		Integer[] ticket = new Integer[6];
-		int counter1=0;
-		int number =0;
-//		for (int i = 0; i < 6; i++) {
-//			System.out.println("Podaj swoją " + (i + 1) + " liczbe ");
-//			ticket[i] = scan.nextInt();
-//
-//		}
-		while(counter1<6) {
+		int counter1 = 0;
+		int number = 0;
+
+		while (counter1 < 6) {
 			System.out.println("Podaj kolejną liczbę: ");
 			try {
-				number =scan.nextInt();
+				number = scan.nextInt();
 				List<Integer> list = Arrays.asList(ticket);
-				
+
 				if (number < 1 || number > 49) {
 					System.out.println("Musisz podać liczbę z zakresu <1,49> ");
 				} else if (list.contains(number)) {
 					System.out.println("Podałeś już ta liczbę");
 				} else {
-					ticket[counter1]= number;
+					ticket[counter1] = number;
 					counter1++;
 				}
-				
+
 			} catch (InputMismatchException e) {
 				System.out.println("To nie jest liczba");
 				scan.nextLine();
 			}
 		}
-		
-		
+
 		scan.close();
 		// sortowanie liczb
 
@@ -79,8 +74,25 @@ public class SymulatorLotto {
 				}
 			}
 		}
-		
-		System.out.println("Wylosowałeś " + counter + " takich samych liczb");
+
+		switch (counter) {
+		case (6):
+			System.out.println("Wylosowałeś " + counter + "! Jesteś bogaty! ");
+			break;
+		case (5):
+			System.out.println("Wylosowałeś " + counter + "! Brawo! ");
+			break;
+		case (4):
+			System.out.println("Wylosowałeś " + counter + "! :) ");
+			break;
+		case (3):
+			System.out.println("Wylosowałeś " + counter + "! Jest ok! ");
+			break;
+		default:
+			System.out.println("Wylosowałeś " + counter + "! Spróbuj szcześcia znowu ");
+			break;
+
+		}
 
 	}
 }
